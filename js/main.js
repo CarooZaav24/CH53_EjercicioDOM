@@ -23,8 +23,21 @@ console.log(otrosElementos.length);
 let btnMostrar= document.getElementById("btnMostrar");
 
 btnMostrar.addEventListener("click", function(event){
-    console.log("Botón btnModificar presionado");
-})
+    event.preventDefault();
+
+    let element = document.createElement("li");
+    element.innerText="Another Item"; //<li>Another Item</li>
+    element.classList.add("list-group-item");
+
+    let element2= element.cloneNode(true);
+
+    // listas.item(0).before(element); before inserta el elemento antes de la lista 
+    // listas.item(0).prepend(element2); inserta el elemento justo al inicio de la lista 
+
+    listas.item(0).append(element); //append inserta el elemento al final de la lista 
+    listas.item(0).after(element2);// inserta el elemento después de la lista 
+});
+
 
 //el AddEventListener es como agregarle una oreja al elemento
 //con e event.preventDefault le digo a un determinado evento que no haga lo que hace por default.
