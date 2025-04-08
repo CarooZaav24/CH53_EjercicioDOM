@@ -13,3 +13,8 @@ git status
 git add .
 git commit m- "mensaje"
 git push origin main
+
+...
+>Vista previa del index.html
+
+![index](https://raw.githubusercontent.com/CarooZaav24/CH53_EjercicioDOM/refs/heads/main/images/index.PNG)
